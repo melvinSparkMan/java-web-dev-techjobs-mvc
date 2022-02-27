@@ -30,9 +30,13 @@ public class SearchController {
         ArrayList<Job> jobs = new ArrayList<>();
 
         if (searchTerm.equals("all") || searchTerm.equals("")){
+
             jobs = JobData.findAll();
+
         } else {
+
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
+
         }
 
         model.addAttribute("jobs", jobs);

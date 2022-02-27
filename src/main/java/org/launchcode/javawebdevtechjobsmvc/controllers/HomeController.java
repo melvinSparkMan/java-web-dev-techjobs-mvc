@@ -22,6 +22,7 @@ public class HomeController {
         model.addAttribute("actions", actionChoices);
 
         return "index";
+        
     }
 
 }
